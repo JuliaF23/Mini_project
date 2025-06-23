@@ -22,9 +22,14 @@ while True:
     if choice == "1":
         add_task()
     elif choice == "2":
-        print("You chose to remove a task.")
+        print("You choose to remove a task:")
+        if task in tasks:
+            tasks.remove(task)
+            print(f"'{task}' has been removed from the list.")
+        else:
+            print("Task not found.")
     elif choice == "3":
-        print("You chose to view tasks.")
+        print("You choose to view tasks.")
     elif choice == "4":
         print("Exiting the application.")
         break
