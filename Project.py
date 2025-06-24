@@ -7,6 +7,13 @@ def add_task():
     tasks.append(task)  # Add task to the list
     print(f"'{task}' has been added to the list.")
 
+def view_tasks():
+    print("Your Tasks")
+    if not tasks:
+        print("There are no tasks yet")
+    else:
+        for i, task in enumerate(tasks,1):
+            print(f"{i}. {task}")
 
 # Loop for the menu
 while True:
@@ -25,6 +32,7 @@ while True:
         print("You chose to remove a task.")
     elif choice == "3":
         print("You chose to view tasks.")
+        view_tasks()
     elif choice == "4":
         print("Exiting the application.")
         break
