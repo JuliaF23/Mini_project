@@ -23,14 +23,6 @@ def add_task():
     # Confirm to the user
     print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
 
-def view_tasks():
-    print("Your tasks:")
-    if not tasks:
-        print("No tasks yet")
-    else:
-        for i, task in enumerate(tasks,1):
-            print(f"{i}. {task}")
-
 # Create a loop for the menu
 while True:
     print("\nAdvanced To-Do List Application")
@@ -48,8 +40,7 @@ while True:
     elif choice == "2":
         print("You chose to remove a task.")  
     elif choice == "3":
-        print("You chose to view tasks.")
-        view_tasks()
+        print("You chose to view tasks.")  
     elif choice == "4":
         print("You chose to suggest tasks.")  
     elif choice == "5":
