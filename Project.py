@@ -24,19 +24,20 @@ def add_task():
     # Confirm to the user
     print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
 
-<<<<<<< view_task
+
+# Function to view tasks
 def view_tasks():
     print("Your tasks:")
     if not tasks:
         print("No tasks yet")
     else:
-        for i, task in enumerate(tasks,1):
+        for i, task in enumerate(tasks, 1):
             print(f"{i}. {task}")
         if not tasks:
             print("You haven't completed any tasks yet.")
-=======
 
-# remove_task
+
+# Function to remove a task
 def remove_task():
     task_name = input("Enter the task name to remove: ").strip()
     for task in tasks:
@@ -45,7 +46,6 @@ def remove_task():
             print(f"'{task_name}' has been removed from the list.")
             return
     print(f"Task '{task_name}' not found.")
->>>>>>> main
 
 
 # Create a loop for the menu
@@ -67,6 +67,7 @@ while True:
         remove_task()
     elif choice == "3":
         print("You chose to view tasks.")
+        view_tasks()
     elif choice == "4":
         print("You chose to suggest tasks.")
     elif choice == "5":
