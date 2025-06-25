@@ -30,6 +30,9 @@ def view_tasks():
     else:
         for i, task in enumerate(tasks,1):
             print(f"{i}. {task}")
+        if not tasks:
+            print("You haven't completed any tasks yet.")
+
 
 # Create a loop for the menu
 while True:
@@ -37,7 +40,7 @@ while True:
     print("1. Add Task")
     print("2. Remove Task")
     print("3. View Tasks")
-    print("4. Suggest Tasks")  
+    print("4. Suggest Tasks")
     print("5. Exit")
     
     # Ask the user for their choice
