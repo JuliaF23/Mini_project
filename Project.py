@@ -2,6 +2,7 @@
 tasks = []
 completed_tasks = []
 
+
 # Function to add a task
 def add_task():
     task = input("Enter the task: ").strip()
@@ -21,6 +22,7 @@ def add_task():
     tasks.append(task_info)
     print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
 
+<<<<<<< completed_task
 # Function to view tasks
 def view_tasks():
     if not tasks:
@@ -58,26 +60,66 @@ def mark_task_completed():
         print("Please enter a valid number.")
 
 # Main menu loop
+=======
+
+# Function to view tasks
+def view_tasks():
+    print("Your tasks:")
+    if not tasks:
+        print("No tasks yet")
+    else:
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+        if not tasks:
+            print("You haven't completed any tasks yet.")
+
+
+# Function to remove a task
+def remove_task():
+    task_name = input("Enter the task name to remove: ").strip()
+    for task in tasks:
+        if task["name"].lower() == task_name.lower():
+            tasks.remove(task)
+            print(f"'{task_name}' has been removed from the list.")
+            return
+    print(f"Task '{task_name}' not found.")
+
+
+# Create a loop for the menu
+>>>>>>> main
 while True:
     print("\nAdvanced To-Do List Application")
     print("1. Add Task")
     print("2. Remove Task")
     print("3. View Tasks")
     print("4. Suggest Tasks")
+<<<<<<< completed_task
     print("5. Mark Task as Completed")
     print("6. View Completed Tasks")
     print("7. Exit")
     
+=======
+    print("5. Exit")
+
+    # Ask the user for their choice
+>>>>>>> main
     choice = input("Enter your choice: ")
-    
+
     if choice == "1":
         add_task()
     elif choice == "2":
+<<<<<<< completed_task
         print("You chose to remove a task.") 
     elif choice == "3":
+=======
+        print("You chose to remove a task.")
+        remove_task()
+    elif choice == "3":
+        print("You chose to view tasks.")
+>>>>>>> main
         view_tasks()
     elif choice == "4":
-        print("You chose to suggest tasks.")  
+        print("You chose to suggest tasks.")
     elif choice == "5":
         mark_task_completed()
     elif choice == "6":
