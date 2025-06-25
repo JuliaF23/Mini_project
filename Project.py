@@ -24,6 +24,17 @@ def add_task():
     # Confirm to the user
     print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
 
+<<<<<<< view_task
+def view_tasks():
+    print("Your tasks:")
+    if not tasks:
+        print("No tasks yet")
+    else:
+        for i, task in enumerate(tasks,1):
+            print(f"{i}. {task}")
+        if not tasks:
+            print("You haven't completed any tasks yet.")
+=======
 
 # remove_task
 def remove_task():
@@ -34,6 +45,7 @@ def remove_task():
             print(f"'{task_name}' has been removed from the list.")
             return
     print(f"Task '{task_name}' not found.")
+>>>>>>> main
 
 
 # Create a loop for the menu
