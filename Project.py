@@ -1,6 +1,7 @@
 # Empty list to store tasks
 tasks = []
 
+
 # Function to add a task
 def add_task():
     task = input("Enter the task: ")  # Ask for task name
@@ -23,26 +24,39 @@ def add_task():
     # Confirm to the user
     print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
 
+
+# remove_task
+def remove_task():
+    task_name = input("Enter the task name to remove: ").strip()
+    for task in tasks:
+        if task["name"].lower() == task_name.lower():
+            tasks.remove(task)
+            print(f"'{task_name}' has been removed from the list.")
+            return
+    print(f"Task '{task_name}' not found.")
+
+
 # Create a loop for the menu
 while True:
     print("\nAdvanced To-Do List Application")
     print("1. Add Task")
     print("2. Remove Task")
     print("3. View Tasks")
-    print("4. Suggest Tasks")  
+    print("4. Suggest Tasks")
     print("5. Exit")
-    
+
     # Ask the user for their choice
     choice = input("Enter your choice: ")
-    
+
     if choice == "1":
         add_task()
     elif choice == "2":
-        print("You chose to remove a task.")  
+        print("You chose to remove a task.")
+        remove_task()
     elif choice == "3":
-        print("You chose to view tasks.")  
+        print("You chose to view tasks.")
     elif choice == "4":
-        print("You chose to suggest tasks.")  
+        print("You chose to suggest tasks.")
     elif choice == "5":
         print("Exiting the application.")
         break
